@@ -12,6 +12,26 @@
 
 body {
     min-height: 100vh;
+    background-color: lightgray;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 150px;
+    gap: 20px;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .grid-container {
@@ -25,4 +45,14 @@ body {
     border: 2px solid black;
     border-radius: 5px;
     box-shadow: 2px 2px;
+}
+
+.announce-card,
+.trending-card {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
 }
