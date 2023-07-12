@@ -34,9 +34,13 @@ h3 {
     font-size: 1.1rem;
 }
 
+
+
+
+
 .grid-container {
     display: grid;
-    grid-template-columns: 300px 300px;
+    grid-template-columns: 350px 350px;
     grid-template-rows: 200px 200px 200px;
     gap: 20px 20px;
 }
@@ -45,6 +49,7 @@ h3 {
     border-radius: 5px;
     box-shadow: 2px 2px #c7c5c5;
     background-color: white;
+    padding: 20px;
 }
 
 .announce-card,
