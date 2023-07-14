@@ -20,10 +20,22 @@ h2 {
     font-weight: 900;
 }
 
-.nav {
+
+.container {
+    height: 100vh;
+    overflow: none;
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    grid-template-rows: 180px 1fr;
+    grid-template-areas:
+        "side header header"
+        "side main right-col";
+}
+
+.header {
     grid-area: header;
     background-color: white;
-    box-shadow: 0 0 5px;
+    box-shadow: 2px 2px 2px;
 }
 
 .sidebar {
@@ -34,72 +46,36 @@ h2 {
 .main-content {
     grid-area: main;
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: "content content announcements"
-        "content content trending";
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40px 1fr 1fr 1fr;
     gap: 10px;
     padding: 10px;
 }
 
-.announcements {
-    grid-area: announcements;
+.main-content h2 {
+    grid-column: span 2;
 }
 
-.trending {
-    grid-area: trending;
-}
-
-.announce-content,
-.trending-content {
-    background-color: white;
-}
-
-.content {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-area: content;
-    background-color: lightgrey;
-    padding: 5px;
-}
-
-.projects {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    gap: 5px;
-}
-
-.projects>div {
+.right-col>div,
+.main-content>div {
+    box-shadow: 2px 2px 2px;
     border-radius: 1rem;
-    padding: 20px;
+    padding: 15px;
     margin: 5px;
     background-color: white;
-    box-shadow: 2px 2px 2px;
 }
 
-
-.announcements,
-.trending {
+.right-col {
+    display: grid;
+    grid-area: right-col;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1fr 40px 1fr;
+    gap: 10px;
     padding: 10px;
 }
 
-.announce-content,
-.trending-content {
-    box-shadow: 2px 2px 2px;
-    border-radius: 1rem;
-    padding: 20px;
-    margin: 5px;
-}
-
-.container {
-    height: 100vh;
-    overflow: none;
-    display: grid;
-    grid-template-columns: 300px auto auto;
-    grid-template-rows: 180px auto auto;
-    grid-template-areas:
-        "side header header header"
-        "side main main main "
-        "side main main main";
+.announcements,
+.trending {
+    padding: 5px;
 }
