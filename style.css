@@ -15,56 +15,91 @@ body {
     background-color: lightgray;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    height: 100vh;
-}
-
 h2 {
-    font-weight: 900;
     font-size: 1.5rem;
-    padding-bottom: 10px;
+    font-weight: 900;
 }
 
-h3 {
-    font-weight: 600;
-    font-size: 1.1rem;
+.nav {
+    grid-area: header;
+    background-color: white;
+    box-shadow: 0 0 5px;
 }
 
-
-
-.side-nav {
+.sidebar {
     background-color: blue;
-    color: white;
-    width: 15%;
-    text-align: center;
-
+    grid-area: side;
 }
 
-.grid-container {
+.main-content {
+    grid-area: main;
     display: grid;
-    grid-template-columns: 350px 350px;
-    grid-template-rows: 200px 200px 200px;
-    gap: 20px 20px;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "content content announcements"
+        "content content trending";
+    gap: 10px;
+    padding: 10px;
 }
 
-.grid-container>div {
-    border-radius: 5px;
-    box-shadow: 2px 2px #c7c5c5;
-    background-color: white;
-    padding: 20px;
+.announcements {
+    grid-area: announcements;
 }
 
-.announce-card,
-.trending-card {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    border-radius: 5px;
-    padding: 20px;
+.trending {
+    grid-area: trending;
+}
+
+.announce-content,
+.trending-content {
     background-color: white;
-    box-shadow: 2px 2px #c7c5c5;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-area: content;
+    background-color: lightgrey;
+    padding: 5px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 5px;
+}
+
+.projects>div {
+    border-radius: 1rem;
+    padding: 20px;
+    margin: 5px;
+    background-color: white;
+    box-shadow: 2px 2px 2px;
+}
+
+
+.announcements,
+.trending {
+    padding: 10px;
+}
+
+.announce-content,
+.trending-content {
+    box-shadow: 2px 2px 2px;
+    border-radius: 1rem;
+    padding: 20px;
+    margin: 5px;
+}
+
+.container {
+    height: 100vh;
+    overflow: none;
+    display: grid;
+    grid-template-columns: 300px auto auto;
+    grid-template-rows: 180px auto auto;
+    grid-template-areas:
+        "side header header header"
+        "side main main main "
+        "side main main main";
 }
