@@ -12,12 +12,19 @@
 
 body {
     min-height: 100vh;
-    background-color: lightgray;
+    background-color: #d1edff;
+    font-family: 'Roboto', sans-serif;
 }
 
 h2 {
     font-size: 1.5rem;
     font-weight: 900;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 5px;
 }
 
 
@@ -26,20 +33,15 @@ h2 {
     overflow: none;
     display: grid;
     grid-template-columns: 300px 1fr 300px;
-    grid-template-rows: 180px 1fr;
+    grid-template-rows: 125px 1fr;
     grid-template-areas:
         "side header header"
         "side main right-col";
 }
 
-.header {
-    grid-area: header;
-    background-color: white;
-    box-shadow: 2px 2px 2px;
-}
 
 .sidebar {
-    background-color: #3c9ce6;
+    background-color: #2b65ed;
     grid-area: side;
 }
 
@@ -49,30 +51,56 @@ h2 {
     align-items: left;
     color: white;
     flex-direction: column;
-    line-height: 2;
-    font-size: 1.5rem;
-    font-weight: 600;
+    line-height: 2.5;
+    font-size: 1.2rem;
+    font-weight: 400;
     padding-top: 20px;
     padding-left: 60px;
+}
+
+.dash-container {
+    display: flex;
+    align-items: center;
+}
+
+.dashboard {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.dash-svg {
+    width: 40px;
+    height: 40x;
+    fill: white;
+}
+
+.header {
+    grid-area: header;
+    background-color: #f7f7f7;
+    box-shadow: 2px 2px 2px;
 }
 
 .header-grid {
     display: grid;
     grid-template-columns: 300px 1fr 300px;
-    grid-template-rows: 25px 25px;
+    grid-template-rows: 5px;
     grid-template-areas: "search search name"
         "intro intro tags";
     gap: 20px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .searchbar {
+    display: flex;
+    align-items: center;
     grid-area: search;
 }
 
 .search {
     border-radius: 5px;
-    background-color: lightgrey;
+    background-color: #d1edff;
+    ;
+    width: 600px;
 }
 
 .magnify {
@@ -80,11 +108,18 @@ h2 {
     height: 25px;
 }
 
+.bell {
+    width: 25px;
+    height: 25px;
+    grid-area: name;
+}
+
 .name {
     grid-area: name;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 2rem;
     padding: 20px;
+    margin-top: 20px;
 }
 
 .intro {
@@ -92,20 +127,15 @@ h2 {
     grid-row-start: end;
     font-weight: 900;
     padding-left: 50px;
-    line-height: 0.8;
 }
 
 .intro-one {
-    font-size: 1.2rem;
-
-}
-
-.intro-two {
     font-size: 1.5rem;
+
 }
 
 input {
-    width: 80%;
+    width: 1000x;
     padding: 5px;
 }
 
@@ -129,7 +159,8 @@ input {
     border-radius: 1rem;
     padding: 15px;
     margin: 5px;
-    background-color: white;
+    background-color: #f7f7f7;
+    ;
 }
 
 .right-col {
@@ -144,4 +175,26 @@ input {
 .announcements,
 .trending {
     padding: 5px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.bigwoofer,
+.scratchycat,
+.quacktastic,
+.creepycrawley {
+    display: flex;
+    align-items: center;
+}
+
+
+.trending-img {
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+}
+
+hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
