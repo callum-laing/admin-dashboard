@@ -97,9 +97,8 @@ h3 {
 }
 
 .search {
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #d1edff;
-    ;
     width: 600px;
 }
 
@@ -112,6 +111,18 @@ h3 {
     width: 25px;
     height: 25px;
     grid-area: name;
+    margin-right: 10px;
+}
+
+.callum-tag {
+    display: flex;
+    align-items: center;
+}
+
+.cl {
+    font-weight: 600;
+    padding-left: 25px;
+    font-size: 1.2rem;
 }
 
 .name {
@@ -130,13 +141,19 @@ h3 {
 }
 
 .intro-one {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 0.5;
+}
 
+.intro-two {
+    font-size: 1.5rem;
+    line-height: 0.5;
 }
 
 input {
     width: 1000x;
     padding: 5px;
+    border: none;
 }
 
 .main-content {
@@ -144,7 +161,7 @@ input {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 40px 225px 225px 225px;
+    grid-template-rows: 40px 1fr 1fr 1fr;
     gap: 10px;
     padding: 10px;
 }
