@@ -39,8 +39,74 @@ h2 {
 }
 
 .sidebar {
-    background-color: blue;
+    background-color: #3c9ce6;
     grid-area: side;
+}
+
+.sidebar-flex {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    color: white;
+    flex-direction: column;
+    line-height: 2;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 20px;
+    padding-left: 60px;
+}
+
+.header-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    grid-template-rows: 25px 25px;
+    grid-template-areas: "search search name"
+        "intro intro tags";
+    gap: 20px;
+    padding: 10px;
+}
+
+.searchbar {
+    grid-area: search;
+}
+
+.search {
+    border-radius: 5px;
+    background-color: lightgrey;
+}
+
+.magnify {
+    width: 25px;
+    height: 25px;
+}
+
+.name {
+    grid-area: name;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+.intro {
+    grid-area: intro;
+    grid-row-start: end;
+    font-weight: 900;
+    padding-left: 50px;
+    line-height: 0.8;
+}
+
+.intro-one {
+    font-size: 1.2rem;
+
+}
+
+.intro-two {
+    font-size: 1.5rem;
+}
+
+input {
+    width: 80%;
+    padding: 5px;
 }
 
 .main-content {
